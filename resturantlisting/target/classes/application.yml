@@ -1,0 +1,22 @@
+server:
+  port: 9091
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka/
+spring:
+  application:
+    name: RESTAURANT-SERVICE
+  datasource:
+    url: jdbc:mysql://mydatabase.ckpukr9uz0r3.eu-north-1.rds.amazonaws.com:3306/restaurantdb
+    password: Password123
+    username: root
+    hikari:
+      max-lifetime: 600000
+  jpa:
+    hibernate:
+      ddl-auto: update
+    database-platform: org.hibernate.dialect.MySQL8Dialect
+    show-sql: true
+        
